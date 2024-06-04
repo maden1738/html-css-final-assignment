@@ -2,6 +2,11 @@ ul {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
   transition: all 0.5s ease-in;
   font: 100% Figtree, sans-serif;
@@ -117,6 +122,11 @@ body.dark-mode {
 .header__icons {
   display: flex;
   gap: 40px;
+}
+.header__icons button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 .header__logo {
   width: 51px;
@@ -285,6 +295,10 @@ body.dark-mode {
   border: 3px solid #f14a16;
   font-weight: 600;
   color: #f14a16;
+  transition: all 0.2s ease-in;
+}
+.button:hover {
+  scale: 1.05;
 }
 .button--filled {
   background-color: #f14a16;

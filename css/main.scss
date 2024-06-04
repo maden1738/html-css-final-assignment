@@ -25,6 +25,11 @@ ul {
      padding: 0;
 }
 
+a {
+     text-decoration: none;
+     color: inherit;
+}
+
 body {
      transition: all 0.5s ease-in;
      font: 100% $font-stack;
@@ -140,6 +145,11 @@ body.dark-mode {
      &__icons {
           display: flex;
           gap: 40px;
+          button {
+               border: none;
+               background-color: transparent;
+               cursor: pointer;
+          }
      }
      &__logo {
           width: 51px;
@@ -311,7 +321,10 @@ body.dark-mode {
      border: 3px solid $accent;
      font-weight: 600;
      color: $accent;
-
+     transition: all 0.2s ease-in;
+     &:hover {
+          scale: 1.05;
+     }
      &--filled {
           background-color: $accent;
           color: white;
