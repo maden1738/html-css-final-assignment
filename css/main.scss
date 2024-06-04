@@ -21,6 +21,10 @@ $text: #000;
 $background: $lightbg;
 $text2: white;
 
+html {
+     scroll-behavior: smooth;
+}
+
 ul {
      padding: 0;
 }
@@ -149,6 +153,7 @@ body.dark-mode {
                border: none;
                background-color: transparent;
                cursor: pointer;
+               color: inherit;
           }
      }
      &__logo {
@@ -211,6 +216,7 @@ body.dark-mode {
           overflow-x: scroll;
      }
      &__card {
+          cursor: pointer;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -225,15 +231,20 @@ body.dark-mode {
           &__price {
                margin-top: 0.7rem;
           }
+
           &__image {
                position: absolute;
                top: -80px;
                display: flex;
                width: 100%;
                justify-content: center;
+               transition: transform 0.1s ease-in;
                img {
                     z-index: 2;
                }
+          }
+          &:hover .hero__card__image {
+               transform: translateY(-10px);
           }
      }
      &__price {
@@ -277,6 +288,10 @@ body.dark-mode {
           width: 250px;
           border-radius: 50px;
           border: 1px solid #fff;
+          cursor: pointer;
+          &:hover {
+               filter: brightness(1.2);
+          }
      }
      &__image-wrapper {
           width: 250px; // same as card
@@ -459,6 +474,10 @@ body.dark-mode {
           width: 340px;
           img {
                width: 100%;
+          }
+          transition: opacity 0.2s ease-in;
+          &:hover {
+               opacity: 0.8;
           }
      }
 }
