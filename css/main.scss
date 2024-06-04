@@ -89,7 +89,7 @@ body.dark-mode {
 }
 
 .header {
-     padding: 26px 17px 0;
+     padding: 26px 32px 0;
      display: flex;
      align-items: center;
 
@@ -657,7 +657,6 @@ body.dark-mode {
           img {
                width: 100%;
           }
-          margin-top: 20px;
      }
      &__copyright {
           font-size: 20px;
@@ -719,6 +718,33 @@ body.dark-mode {
      z-index: -1;
 }
 
+@media screen and (min-width: 768px) {
+     .header {
+          padding-left: 32px;
+          padding-right: 32px;
+     }
+     .others-section {
+          &__card {
+               width: 370px;
+          }
+     }
+     .new-section {
+          &__container {
+               padding-left: 64px;
+          }
+     }
+     .footer {
+          &__container {
+               flex-direction: row;
+               justify-content: space-between;
+          }
+          &__subscribe {
+               width: fit-content;
+               transform: translateY(-300px);
+          }
+     }
+}
+
 @media screen and (min-width: 1024px) {
      .light-mode .hero__card {
           background: $gradient;
@@ -768,7 +794,7 @@ body.dark-mode {
           }
      }
      .header {
-          padding: 18px 87px;
+          padding: 18px 70px;
           &__main {
                > img {
                     order: -1;
@@ -781,6 +807,9 @@ body.dark-mode {
           }
           &__button {
                display: inline;
+          }
+          &__buttons {
+               margin-left: 0;
           }
      }
 
@@ -959,8 +988,6 @@ body.dark-mode {
           }
           &__container {
                padding-top: 112px;
-               flex-direction: row;
-               justify-content: space-between;
           }
           &__input {
                font-size: 24px;
@@ -972,13 +999,6 @@ body.dark-mode {
                flex-direction: row;
                align-items: center;
                justify-content: flex-start;
-          }
-          &__subscribe {
-               width: fit-content;
-               transform: translateY(-300px);
-          }
-          &__copyright {
-               padding-top: 90px;
           }
      }
      .new-section {
